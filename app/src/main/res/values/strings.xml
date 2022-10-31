@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Shoppin</string>
+    <string name="login">Login</string>
+    <string name="no_account"><u><b>Create account</b></u></string><!-- make bold & underline-->
+    <string name="yes_account"><u><b>Sign in instead</b></u></string><!-- make bold & underline-->
+    <string name="title_activity_maps">MapsActivity</string>
+</resources>

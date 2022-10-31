@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "352589761675",
+    "project_id": "shoppin-caddb",
+    "storage_bucket": "shoppin-caddb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:352589761675:android:398f5f1bf947665b2f988e",
+        "android_client_info": {
+          "package_name": "com.example.shoppin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "352589761675-9ean8r6ufllddkja6lp4otkunl21t3lb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkpklCc4Fj-wyXlkqzC-DnIhGchH09cnI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "352589761675-9ean8r6ufllddkja6lp4otkunl21t3lb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
