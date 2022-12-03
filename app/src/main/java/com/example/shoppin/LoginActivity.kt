@@ -67,6 +67,11 @@ class LoginActivity : AppCompatActivity() {
         binding.passwordEt.setOnClickListener {
             myEnter()
         }
+        //handle click, calculate
+        binding.multiBtn.setOnClickListener {
+            startActivity(Intent(this, MultiplyActivity::class.java))
+            finish()
+        }
 
     }
 

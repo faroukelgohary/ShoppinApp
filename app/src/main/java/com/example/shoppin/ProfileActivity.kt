@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
+import androidx.fragment.app.Fragment
 import com.example.shoppin.databinding.ActivityProfileBinding
 import com.example.shoppin.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -49,6 +50,17 @@ class ProfileActivity : AppCompatActivity() {
         binding.mapBtn.setOnClickListener {
             goMap()
         }
+
+        //handle click, buyer
+        binding.buyerFrag.setOnClickListener {
+            replaceFragment(BuyerFragment())
+        }
+    }
+
+    private fun replaceFragment(fragment: Fragment) {
+        val transaction = supportFragmentManager.beginTransaction()
+        transaction.replace(R.id.frameLayout, fragment)
+        transaction.commit()
     }
 
     private fun goMap() {

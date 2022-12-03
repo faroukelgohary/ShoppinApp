@@ -66,7 +66,18 @@
         android:layout_marginTop="10dp"
         android:text="Sign in" />
 
+    <!--evaluation button-->
     <!--Create Account-->
+
+    <Button
+        android:id="@+id/multiBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordTil"
+        android:layout_marginTop="60dp"
+        android:text="Multiplier" />
+
+
     <TextView
         android:id="@+id/noAccountTv"
         android:layout_width="wrap_content"

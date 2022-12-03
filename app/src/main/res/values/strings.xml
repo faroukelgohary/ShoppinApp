@@ -4,4 +4,6 @@
     <string name="no_account"><u><b>Create account</b></u></string><!-- make bold & underline-->
     <string name="yes_account"><u><b>Sign in instead</b></u></string><!-- make bold & underline-->
     <string name="title_activity_maps">MapsActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
