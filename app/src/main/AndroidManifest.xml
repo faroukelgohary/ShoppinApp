@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Shoppin">
         <activity
-            android:name=".MultiplyActivity"
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".milestone1.MultiplyActivity"
             android:exported="false" />
 
         <meta-data

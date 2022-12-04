@@ -47,14 +47,25 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         //handle click, map
-        binding.mapBtn.setOnClickListener {
-            goMap()
-        }
+//        binding.mapBtn.setOnClickListener {
+//            goMap()
+//        }
 
         //handle click, buyer
         binding.buyerFrag.setOnClickListener {
-            replaceFragment(BuyerFragment())
+            goBuyerActivity()
         }
+
+
+        //handle click, buyer2
+//        binding.buyerFrag.setOnClickListener {
+//            replaceFragment(BuyerFragment())
+//        }
+    }
+
+    private fun goBuyerActivity() {
+        startActivity(Intent(this, MainActivity::class.java))
+        onPause()
     }
 
     private fun replaceFragment(fragment: Fragment) {

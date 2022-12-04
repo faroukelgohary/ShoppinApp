@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,7 +13,8 @@
     <FrameLayout
         android:id="@+id/frameLayout"
         android:layout_width="match_parent"
-        android:layout_height="350dp" />
+        android:layout_height="350dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,11 +29,11 @@
         style="@style/TextAppearance.MaterialComponents.Body1"/>
 
     <Button
-        android:id="@+id/mapBtn"
+        android:id="@+id/sellerBtn"
         android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MAP"/>
+        android:text="Seller"/>
 
     <Button
         android:id="@+id/signOutBtn"
@@ -46,10 +48,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Buyer"/>
-
-
-
-
 
 </LinearLayout>
 
