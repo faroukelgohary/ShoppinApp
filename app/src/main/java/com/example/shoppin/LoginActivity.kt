@@ -123,7 +123,7 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(Intent(this, ProfileActivity::class.java))
                 finish()
 
-        }
+            }
             .addOnFailureListener { e->
                 //sign in failure
                 progressDialog.dismiss()
