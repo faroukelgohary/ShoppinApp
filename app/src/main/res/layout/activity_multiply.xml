@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".milestone1.MultiplyActivity">
+
+    <EditText
+        android:id="@+id/variable1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="x"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/variable2"
+        android:layout_marginTop="60dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="y"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_marginTop="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate"/>
+
+</RelativeLayout>
