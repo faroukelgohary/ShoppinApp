@@ -1,5 +1,6 @@
 package com.example.shoppin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity(), IProductLoadListener, ICartLoadListene
     }
 
     @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
-    public fun onUpdateCartEvent(event: UpdateCartEvent)
+    fun onUpdateCartEvent(event: UpdateCartEvent)
     {
         countCartFromFirebase()
     }
@@ -110,6 +111,8 @@ class MainActivity : AppCompatActivity(), IProductLoadListener, ICartLoadListene
         val gridLayoutManager = GridLayoutManager(this,2)
         recycler_product.layoutManager = gridLayoutManager
         recycler_product.addItemDecoration(SpaceItemDecoration())
+
+        btnCart.setOnClickListener{ startActivity(Intent(this,CartActivity::class.java) )}
     }
 
     override fun onProductLoadSuccess(productModelList: List<ProductModel>?) {

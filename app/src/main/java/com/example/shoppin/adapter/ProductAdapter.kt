@@ -27,7 +27,7 @@ import kotlin.collections.HashMap
 
 
 class ProductAdapter(
-    private val contect: Context,
+    private val context: Context,
     private val list: List<ProductModel>,
     private val cartListener: ICartLoadListener
 
@@ -47,7 +47,6 @@ class ProductAdapter(
 
           init {
               imageView = itemView.findViewById(R.id.imageView) as ImageView;
-
               txtName = itemView.findViewById(R.id.txtName) as TextView;
               txtPrice = itemView.findViewById(R.id.txtPrice) as TextView;
 
@@ -61,11 +60,11 @@ class ProductAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyProductViewHolder {
-        return MyProductViewHolder(LayoutInflater.from(contect).inflate(R.layout.layout_product_item,parent,false))
+        return MyProductViewHolder(LayoutInflater.from(context).inflate(R.layout.layout_product_item,parent,false))
     }
 
     override fun onBindViewHolder(holder: MyProductViewHolder, position: Int) {
-        Glide.with(contect)
+        Glide.with(context)
             .load(list[position].image)
             .into(holder.imageView!!)
         holder.txtName!!.text = StringBuilder().append(list[position].name)
@@ -99,8 +98,7 @@ class ProductAdapter(
                         userCart.child(productModel.key!!)
                             .updateChildren(updateData)
                             .addOnSuccessListener {
-//                                EventListener.getDefault().postSticky(UpdateCartEvent())
-//                                EventBus.getDefault().postSticky(UpdateCartEvent())
+                                EventBus.getDefault().postSticky(UpdateCartEvent())
                                 cartListener.onLoadCartFailed("Success add to cart")
                             }
                             .addOnFailureListener{e-> cartListener.onLoadCartFailed(e.message)}
@@ -128,9 +126,7 @@ class ProductAdapter(
                 override fun onCancelled(error: DatabaseError) {
                     cartListener.onLoadCartFailed(error.message)
                 }
-
             })
-
     }
 
     override fun getItemCount(): Int {

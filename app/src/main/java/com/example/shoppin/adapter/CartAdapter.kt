@@ -89,7 +89,7 @@ class CartAdapter(
     }
 
     private fun plusCartItem(holder: CartAdapter.MyCartViewHolder, cartModel: CartModel) {
-        cartModel.quantity -= 1
+        cartModel.quantity += 1
         cartModel.totalPrice = cartModel.quantity * cartModel.price!!.toFloat()
 
         holder.txtQuantity!!.text = StringBuilder("").append(cartModel.quantity)

@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"/>
 
         <TextView
+            android:id="@+id/txtTotal"
             android:text="CART"
             android:layout_gravity="center_vertical"
             android:textSize="30sp"
@@ -34,7 +35,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id ="@+id/recycler_product"
+        android:id ="@+id/recycler_cart"
         android:padding="8dp"
         android:layout_below="@id/panel"
         android:layout_width="match_parent"
