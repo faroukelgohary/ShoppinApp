@@ -65,7 +65,9 @@ class ProductAdapter(
     }
 
     override fun onBindViewHolder(holder: MyProductViewHolder, position: Int) {
-        Glide.with(contect).load(list[position].image).into(holder.imageView!!)
+        Glide.with(contect)
+            .load(list[position].image)
+            .into(holder.imageView!!)
         holder.txtName!!.text = StringBuilder().append(list[position].name)
         holder.txtPrice!!.text = StringBuilder("$").append(list[position].price)
 
